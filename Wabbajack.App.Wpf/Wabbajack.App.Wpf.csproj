@@ -2,14 +2,14 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net8.0-windows</TargetFramework>
+    <TargetFramework>net9.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
     <Platforms>x64</Platforms>
     <RuntimeIdentifier>win-x64</RuntimeIdentifier>
     <Version>$(VERSION)</Version>
     <AssemblyVersion>$(VERSION)</AssemblyVersion>
     <FileVersion>$(VERSION)</FileVersion>
-    <Copyright>Copyright © 2019-2022</Copyright>
+    <Copyright>Copyright © 2019-2024</Copyright>
     <Description>An automated ModList installer</Description>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
    <!-- <IncludeSymbolsInSingleFile>true</IncludeSymbolsInSingleFile> -->
@@ -106,6 +106,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Wabbajack.CLI.Builder\Wabbajack.CLI.Builder.csproj" />
+    <ProjectReference Include="..\Wabbajack.CLI\Wabbajack.CLI.csproj" />
     <ProjectReference Include="..\Wabbajack.Services.OSIntegrated\Wabbajack.Services.OSIntegrated.csproj" />
   </ItemGroup>
 

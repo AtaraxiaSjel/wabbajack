@@ -1,4 +1,4 @@
-
+﻿
 using Microsoft.Extensions.DependencyInjection;
 namespace Wabbajack.CLI;
 using Wabbajack.CLI.Verbs;
@@ -27,6 +27,8 @@ CommandLineBuilder.RegisterCommand<HashFile>(HashFile.Definition, c => ((HashFil
 services.AddSingleton<HashFile>();
 CommandLineBuilder.RegisterCommand<HashUrlString>(HashUrlString.Definition, c => ((HashUrlString)c).Run);
 services.AddSingleton<HashUrlString>();
+CommandLineBuilder.RegisterCommand<IndexNexusMod>(IndexNexusMod.Definition, c => ((IndexNexusMod)c).Run);
+services.AddSingleton<IndexNexusMod>();
 CommandLineBuilder.RegisterCommand<Install>(Install.Definition, c => ((Install)c).Run);
 services.AddSingleton<Install>();
 CommandLineBuilder.RegisterCommand<InstallCompileInstallVerify>(InstallCompileInstallVerify.Definition, c => ((InstallCompileInstallVerify)c).Run);
@@ -43,8 +45,6 @@ CommandLineBuilder.RegisterCommand<MirrorFile>(MirrorFile.Definition, c => ((Mir
 services.AddSingleton<MirrorFile>();
 CommandLineBuilder.RegisterCommand<ModlistReport>(ModlistReport.Definition, c => ((ModlistReport)c).Run);
 services.AddSingleton<ModlistReport>();
-CommandLineBuilder.RegisterCommand<SetNexusApiKey>(SetNexusApiKey.Definition, c => ((SetNexusApiKey)c).Run);
-services.AddSingleton<SetNexusApiKey>();
 CommandLineBuilder.RegisterCommand<SteamDownloadFile>(SteamDownloadFile.Definition, c => ((SteamDownloadFile)c).Run);
 services.AddSingleton<SteamDownloadFile>();
 CommandLineBuilder.RegisterCommand<SteamDumpAppInfo>(SteamDumpAppInfo.Definition, c => ((SteamDumpAppInfo)c).Run);
